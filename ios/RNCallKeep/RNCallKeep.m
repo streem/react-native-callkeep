@@ -563,7 +563,7 @@ RCT_EXPORT_METHOD(setAudioRoute: (NSString *)uuid
     }
     @catch ( NSException *e ){
         NSLog(@"[RNCallKeep][setAudioRoute] exception: %@",e);
-        reject(@"Failure to set audio route", e, nil);
+        reject(@"FAILED_TO_SET_AUDIO_ROUTE", @"Failure to set audio route", nil);
     }
 }
 
@@ -580,7 +580,7 @@ RCT_EXPORT_METHOD(getAudioRoutes: (RCTPromiseResolveBlock)resolve
     }
     @catch ( NSException *e ) {
         NSLog(@"[RNCallKeep][getAudioRoutes] exception: %@",e);
-        reject(@"Failure to get audio routes", e, nil);
+        reject(@"FAILED_TO_GET_AUDIO_ROUTES", @"Failure to get audio routes", nil);
     }
 }
 
